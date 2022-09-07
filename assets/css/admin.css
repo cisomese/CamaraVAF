@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+body {
+  background-image: url(../images/leaf-176722_960_720.webp);
+  background-position: center;
+  max-width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.container {
+  width: 500px;
+  height: 550px;
+  margin: 5% auto;
+  background: rgb(245, 245, 245);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 70px 70px 60px black;
+  opacity: 0.8;
+}
+h2 {
+  text-align: center;
+  color: rgb(119, 119, 119);
+  padding: 50px;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+::placeholder {
+  color: #777;
+}
+form {
+  width: 500px;
+  height: 1000px;
+}
+form #inp1 {
+  width: 300px;
+  margin-left: 10px;
+  margin-top: 50px;
+  outline: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px #777 solid;
+}
+form #inp2 {
+  width: 300px;
+  margin-left: 10px;
+  margin-top: 50px;
+  outline: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px #777 solid;
+}
+.show-p {
+  margin-left: 200px;
+  margin-top: 20px;
+}
+.fa-solid {
+  margin-left: 100px;
+}
+.fas {
+  margin-left: 100px;
+}
+form .log-btn {
+  width: 300px;
+  height: 35px;
+  margin: 40px 100px;
+  background: linear-gradient(to right, rgb(196, 193, 193), rgb(76, 46, 224));
+  border-radius: 10px;
+  border: 0;
+  text-transform: uppercase;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.log-btn:hover {
+  opacity: 1;
+}
+.both {
+  margin: 5% auto;
+}
+.rem-me {
+  width: 300px;
+  padding: 5px 200px;
+  margin-top: 40px;
+}
+.link {
+  text-align: center;
+}
+.link a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.5;
+}
+.link a:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 500px) {
+  .both {
+    width: 100%;
+    height: 100%;
+  }
+  .log-btn {
+    margin: 0;
+  }
+}
