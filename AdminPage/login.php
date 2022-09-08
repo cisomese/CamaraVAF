@@ -1,5 +1,5 @@
 <?php
-//include "../assets/connection/connect.php"
+include "../assets/connection/connect.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,16 +42,18 @@
           </div>
           <input type="submit" name="login" class="log-btn" value="log-in" />
           <?php  
+                /*
                 session_start();  
                 $host = "localhost";  
                 $username = "root";  
                 $password = "";  
-                $database = "VAF";  
+                $database = "VAF"; 
+                */ 
                 $message = "";  
                 try  
                 {  
-                      $connect = new PDO("mysql:host=$host; dbname=$database", $username, $password);  
-                      $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
+                     // $connect = new PDO("mysql:host=$host; dbname=$database", $username, $password);  
+                     // $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
                       if(isset($_POST["login"]))  
                       {   
                           if(empty($_POST["username"]) ||  empty($_POST["password"]))  
@@ -61,7 +63,7 @@
                           else  
                           {  
                                 $query = "SELECT * FROM user WHERE username = :username AND password = :password";  
-                                $statement = $connect->prepare($query);  
+                                $statement = $conn->prepare($query);  
                                 $statement->execute(  
                                     array(  
                                           'username'     =>     $_POST["username"],  
