@@ -2,32 +2,34 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  box-sizing: border-box;
 }
 body {
+  background-image: url("../images/mona.jpg");
+  background-repeat: no-repeat;
   width: 100%;
   height: 90vh;
-  background-color: peachpuff;
   overflow: hidden;
 }
 .container {
   width: 60%;
   text-align: center;
-  height: 95%;
+  height: 98%;
   margin: 2.5% auto;
   background: rgb(239, 233, 232);
   border-radius: 5px;
   position: relative;
-
-  box-shadow: 10px 0 60px brown;
+  overflow-x: hidden;
+  box-shadow: 10px 0 60px 0 rgb(221, 191, 191);
 }
 .h3-headers {
-  color: #777;
+  font-size: 20px;
+  color: rgb(95, 93, 93);
   /* background-color: blue;*/
   margin-bottom: 30px;
   padding: 20px 73px;
 }
 h4 {
+  font-size: 17px;
   color: #777;
   margin-bottom: 5px;
 }
@@ -37,7 +39,6 @@ h4 {
   right: 2.5%;
   position: absolute;
   top: 50px;
-  transition: 0.5s;
 }
 form .inp1 {
   width: 80%;
@@ -49,25 +50,77 @@ form .inp1 {
   background: transparent;
 }
 .btn-box {
-  margin: 30px auto;
+  display: flex;
+  margin: 30px 100px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+select {
+  background: rgb(107, 199, 71);
+  color: whitesmoke;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 form button {
   width: 110px;
+  font-style: italic;
+  color: whitesmoke;
   background: linear-gradient(to right, rgb(174, 215, 170), rgb(66, 197, 15));
   border: none;
   border-radius: 25px;
   height: 35px;
   cursor: pointer;
 }
+input[type="checkbox"] {
+  accent-color: rgb(107, 199, 71);
+}
+.gender-age {
+  font-size: 16px;
+  width: 97%;
+  color: rgb(103, 97, 97);
+}
 
 #personal-info {
   position: relative;
 }
-.skills-check {
+.specific-skill {
+  text-align: center;
   display: grid;
-  width: 33.333%;
-  margin: -10px 33.33% 0 33.33%;
+  padding: 0px;
+  width: 60%;
+  margin: 0 20% 0 20%;
 }
+.skills-check {
+  font-size: 2px;
+  color: rgb(103, 97, 97);
+}
+.break-div {
+  font-size: 16px;
+  float: left;
+  width: 50%;
+  margin: 1% 1% 1% 4%;
+  text-align: left;
+}
+.break-div2 {
+  text-align: left;
+  font-size: 16px;
+  width: 40%;
+  margin: 1% 4% 1% 1%;
+  float: right;
+}
+
+.reasons-break {
+  text-align: left;
+  margin-left: 100px;
+  float: left;
+  width: 30%;
+}
+.reasons-break2 {
+  text-align: left;
+  margin-right: 75px;
+  float: right;
+  width: 30%;
+}
+
 .card {
   display: none;
 }
@@ -90,11 +143,13 @@ form button {
   color: #333;
   position: relative;
 }
-
+.file-upload {
+  margin: 20px;
+}
 #progress {
   position: absolute;
   height: 100%;
-  width: 800px;
+  width: 25%;
   background: linear-gradient(to right, rgb(158, 208, 154), rgb(66, 197, 15));
 }
 #progress::after {
@@ -109,40 +164,184 @@ form button {
   border-left: 20px solid rgb(66, 197, 15);
 }
 
-/*const multiStepForm = document.querySelector("[data-multi-step]");
-const formSteps = [...multiStepForm.querySelectorAll("[data-step]")];
-
-let currentStep = formSteps.findIndex((step) => {
-  return step.classList.contains("active");
-});
-
-if (currentStep < 0) {
-  currentStep = 0;
-  formSteps[currentStep].classList.add("active");
-  showCurrentStep();
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .container {
+    width: 75%;
+  }
+  .card {
+    display: grid;
+  }
+  .h3-headers {
+    font-size: 18px;
+    padding: 5px 5px;
+    color: #777;
+    margin: 2px;
+  }
+  h3 {
+    margin: 15px 0 5px 0;
+  }
+  h4 {
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    padding: 0 30px;
+  }
+  .step-row {
+    display: none;
+  }
+  .btn-box {
+    display: none;
+  }
+  .gender-age {
+    font-size: 16px;
+  }
+  form button {
+    width: 90px;
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .more-info {
+    margin: 10px 0;
+  }
+  .specific-skill {
+    font-size: 16px;
+  }
+  .reasons-fr-vol {
+    font-size: 16px;
+  }
+  .reasons-break {
+    margin-top: 10px;
+    float: left;
+    width: 30%;
+  }
+  .reasons-break2 {
+    margin-top: 10px;
+    width: 29%;
+  }
+  .lbls {
+    width: 95%;
+    font-size: 16px;
+    margin: 20px 0;
+  }
+  .inp1new {
+    font-size: 16px;
+  }
+  .file-upload {
+    margin: 20px;
+  }
 }
 
-multiStepForm.addEventListener("click", (e) => {
-  let incrementor;
-  if (e.target.matches("[data-next]")) {
-    incrementor = 1;
-  } else if (e.target.matches("[data-back]")) {
-    incrementor - 1;
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    height: 100%;
+    overflow: scroll;
   }
-  if (incrementor == null) return;
-
-  const inputs = [...formSteps[currentStep].querySelectorAll("input")];
-  const allValid = inputs.every((input) => input.reportValidity());
-
-  if (allValid) {
-    currentStep += incrementor;
-    showCurrentStep();
+  .card {
+    display: grid;
   }
-});
+  .h3-headers {
+    font-size: 15px;
+    padding: 5px 5px;
+    margin: 2px;
+  }
+  h3 {
+    margin: 15px 0 5px 0;
+  }
+  h4 {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    padding: 0 30px;
+  }
+  .step-row {
+    display: none;
+  }
+  .form .inp1 {
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 13px;
+    background: transparent;
+  }
+  .btn-box {
+    display: none;
+  }
+  .gender-age {
+    font-size: 12px;
+    margin: 13px 0 13px 0;
+  }
+  form button {
+    width: 60px;
+    background: linear-gradient(to right, rgb(174, 215, 170), rgb(66, 197, 15));
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+    margin: 20px;
+    cursor: pointer;
+  }
 
-function showCurrentStep() {
-  formSteps.forEach((step, index) => {
-    step.classList.toggle("active", index === currentStep);
-  });
+  .more-info {
+    margin: 10px 0;
+  }
+
+  .specific-skill {
+    font-size: 12px;
+    text-align: center;
+    display: grid;
+    padding: 0px;
+    width: 60%;
+    margin: 0 20% 0 20%;
+  }
+  .break-div {
+    float: left;
+    width: 40%;
+    margin: 1% 1% 1% 4%;
+    text-align: left;
+  }
+  .break-div2 {
+    text-align: left;
+
+    width: 40%;
+    margin: 1% 4% 1% 1%;
+    float: right;
+  }
+  .reasons-fr-vol {
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+  .reasons {
+    text-align: center;
+    width: 100%;
+  }
+  .reasons-break {
+    float: left;
+    width: 30%;
+    margin: 0 0 0 10%;
+    padding: 0 0 0 5%;
+    text-align: left;
+  }
+  .reasons-break2 {
+    width: 30%;
+    float: right;
+    margin: 0 15% 0 0;
+    text-align: left;
+  }
+  .inp1new {
+    margin: 10px;
+  }
+  .file-upload {
+    margin: 20px;
+  }
 }
-*/
