@@ -87,8 +87,7 @@ include '../assets/connection/connect.php';
         <div class="content-2">
           <div class="recent-apps">
             <div class="title">
-              <h2>Recent Applications</h2>
-              <a href="viewAll.php" class="btn">View All</a>
+              <h2>All Applications</h2>
             </div>
             <table>
               <tr>
@@ -103,7 +102,7 @@ include '../assets/connection/connect.php';
                 
                         $a=1;
                         $stmt = $conn->prepare(
-                                "SELECT * FROM form ORDER BY id desc limit 3");
+                                "SELECT * FROM form");
                         $stmt->execute();
                         $result = $stmt->fetchAll();
                         foreach($result as $row)

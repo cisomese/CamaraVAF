@@ -154,7 +154,7 @@ include "../assets/connection/connect.php";
             <input
               class="inp1"
               name="emer_email"
-              type="city"
+              type="email"
               placeholder="Email"
             />
           </div>
@@ -202,53 +202,57 @@ include "../assets/connection/connect.php";
           </div>
           <div class="specific-skill">
             <div class="h3-headers">
-              <h3>Specific Skills</h3>
+              <h3 class="spec">Specific Skills</h3>
             </div>
             <div class="skills-check">
-              <label for="select1">Hardware and Maintenance</label>
+              <div class="break-div">
+                <label for="select1">Hardware and Maintenance</label>
 
-              <select name="hw_maintain" id="select1">
-                <option value="No">No</option>
-                <option value="Good">Good</option>
-                <option value="Very Good">Very Good</option>
-                <option value="Excellent">Excellent</option>
-              </select>
+                <select name="hw_maintain" id="select1">
+                  <option value="No">No</option>
+                  <option value="Good">Good</option>
+                  <option value="Very Good">Very Good</option>
+                  <option value="Excellent">Excellent</option>
+                </select>
+                <br />
 
-              <label for="select2">Ubuntu Operating Systems</label>
+                <label for="select2">Ubuntu Operating Systems</label>
 
-              <select name="ubuntu_os" id="select2">
-                <option value="No">No</option>
-                <option value="Good">Good</option>
-                <option value="Very Good">Very Good</option>
-                <option value="Excellent">Excellent</option>
-              </select>
-
-              <label for="select3">Networking</label>
-
-              <select name="networking" id="select3">
-                <option value="No">No</option>
-                <option value="Good">Good</option>
-                <option value="Very Good">Very Good</option>
-                <option value="Excellent">Excellent</option>
-              </select>
-
-              <label for="select4">Lab set up / Vetting</label>
-
-              <select name="labSetup" id="select4">
-                <option value="No">No</option>
-                <option value="Good">Good</option>
-                <option value="Very Good">Very Good</option>
-                <option value="Excellent">Excellent</option>
-              </select>
-
-              <label for="select5">Database</label>
-
-              <select name="database" id="select5">
-                <option value="No">No</option>
-                <option value="Good">Good</option>
-                <option value="Very Good">Very Good</option>
-                <option value="Excellent">Excellent</option>
-              </select>
+                <select name="ubuntu_os" id="select2">
+                  <option value="No">No</option>
+                  <option value="Good">Good</option>
+                  <option value="Very Good">Very Good</option>
+                  <option value="Excellent">Excellent</option>
+                </select>
+                <br />
+                <label for="select3">Networking</label>
+                <br />
+                <select name="networking" id="select3">
+                  <option value="No">No</option>
+                  <option value="Good">Good</option>
+                  <option value="Very Good">Very Good</option>
+                  <option value="Excellent">Excellent</option>
+                </select>
+              </div>
+              <div class="break-div2">
+                <label for="select4">Lab set up / Vetting</label>
+                <br />
+                <select name="labSetup" id="select4">
+                  <option value="No">No</option>
+                  <option value="Good">Good</option>
+                  <option value="Very Good">Very Good</option>
+                  <option value="Excellent">Excellent</option>
+                </select>
+                <br />
+                <label for="select5">Database</label>
+                <br />
+                <select name="database" id="select5">
+                  <option value="No">No</option>
+                  <option value="Good">Good</option>
+                  <option value="Very Good">Very Good</option>
+                  <option value="Excellent">Excellent</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="btn-box">
@@ -257,57 +261,66 @@ include "../assets/connection/connect.php";
           </div>
         </div>
 
-        <div data-step class="card" class="reasons-fr-vol">
+        <div data-step class="card reasons-fr-vol">
           <div class="h3-headers">
             <h3>Reasons For Volunteering</h3>
           </div>
-          <div class="reasons_for_vol">
-            <label for="for-ac-cr">For academic credit:</label>
-            <input
-              type="checkbox"
-              name="reason"
-              id="for-ac-cr"
-              value="For academic credit"
-            />
-            <label for="learn-new-sk">To learn new skills:</label>
-            <input
-              type="checkbox"
-              name="reason"
-              id="learn-new-sk"
-              value="To learn new skills"
-            />
-            <label for="for-so-int">For social interaction:</label>
-            <input
-              type="checkbox"
-              name="reason"
-              id="for-so-intr"
-              value="For social interaction"
-            />
-            <br />
-            <br />
-            <label for="to-gain-emp-sk">To gain employment skills:</label>
-            <input
-              type="checkbox"
-              name="reason"
-              id="to-gain-emp-sk"
-              value="To gain employment skills"
-            />
-            <label for="share-sk">To share my skills:</label>
-            <input
-              type="checkbox"
-              name="reason"
-              id="share-sk"
-              value="To share my skills"
-            />
-            <label for="to-stay-act">To stay active:</label>
-            <input
-              type="checkbox"
-              name="reason"
-              id="to-stay-act"
-              value="To say active"
-            />
-            <br />
-            <br />
+          <div class="reasons">
+            <div class="reasons-break">
+              <input
+                type="checkbox"
+                name="reason"
+                id="for-ac-cr"
+                value="For academic credit"
+              />
+              <label for="for-ac-cr"> For academic credit</label>
+              <br />
+
+              <input
+                type="checkbox"
+                name="reason"
+                id="learn-new-sk"
+                value="To learn new skills"
+              />
+              <label for="learn-new-sk">To learn new skills</label>
+
+              <br />
+
+              <input
+                type="checkbox"
+                name="reason"
+                id="for-so-int"
+                value="For social interaction"
+              />
+              <label for="for-so-int">For social interaction</label>
+            </div>
+            <div class="reasons-break2">
+              <input
+                type="checkbox"
+                name="reason"
+                id="to-gain-emp-sk"
+                value="To gain employment skills"
+              />
+              <label for="to-gain-emp-sk">To gain employment skills</label>
+              <br />
+
+              <input
+                type="checkbox"
+                name="reason"
+                id="share-sk"
+                value="To share my skills"
+              />
+              <label for="share-sk">To share my skills</label>
+              <br />
+
+              <input
+                type="checkbox"
+                name="reason"
+                id="to-stay-act"
+                value="To say active"
+              />
+              <label for="to-stay-act">To stay active</label>
+            </div>
           </div>
           <div class="if-other">
             <input
@@ -320,12 +333,12 @@ include "../assets/connection/connect.php";
           </div>
           <div class="more-info">
             <div class="h3-headers">
-              <h3 style="margin-bottom: -25px" ;>More Information</h3>
+              <h3>More Information</h3>
             </div>
             <div class="lbls">
               <label>Do You Have Physical Limitations?</label>
-              <label for="phy-lim"> No</label>
-              <input type="checkbox" name="physical_lim" id="phy-lim" value="no" />
+              <label class="lbls" for="phy-lim"> No</label>
+              <input type="checkbox" name="physical_lim" id="phy-lim" />
               <input
                 class="inp1 inp1new"
                 name="physical_lim_exp"
@@ -333,10 +346,10 @@ include "../assets/connection/connect.php";
                 placeholder="If yes (Please Explain)..."
               />
             </div>
-            <label
+            <label class="lbls"
               >Have you ever been volunteer to any othe organization?</label
             >
-            <label for="any-other-org"> No</label>
+            <label class="lbls" for="any-other-org"> No</label>
             <input type="checkbox" name="other_org" id="any-other-org" />
             <input
               class="inp1 inp1new"
@@ -349,7 +362,7 @@ include "../assets/connection/connect.php";
             <button type="button" data-back id="Back3">Back</button>
           </div>
           <div class="file-upload">
-            <span>Upload Your Photo:</span>
+            <span class="upload">Upload Your Photo:</span>
             <div class="file-input">
               <input
                 type="file"
@@ -359,7 +372,7 @@ include "../assets/connection/connect.php";
               />
             </div>
           </div>
-          <div class="btn-box">
+          <div id="sub-btn" class="btn-bon">
             <button type="submit" name="register">Submit</button>
           </div>
         </div>
